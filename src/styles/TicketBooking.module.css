@@ -1,0 +1,172 @@
+/* Page Container Styling */
+.pageContainer {
+    padding: 20px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: url('/src/assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.8; /* Reduced opacity for background image */
+  }
+  
+  /* Footer Styling */
+ 
+/* Footer Styling */
+.footer {
+    position:static;
+    bottom: 0;
+    width: 100%;
+    background: rgba(245, 245, 245, 0.401);
+    color: #441b1b;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px; /* Font size for footer text */
+    font-weight: bold; /* Bold text */
+    text-shadow: 1px 1px 4px rgba(95, 91, 91, 0.6); /* Text shadow for effect */
+  }
+  
+  /* Form Container Styling */
+  .formContainer {
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white background */
+    padding: 20px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Adjusted margin for reduced gap */
+    width: 100%;
+    max-width: 500px; /* Fixed width */
+    height: auto; /* Adjusted height */
+    font-family: 'Arial', sans-serif; /* Improved font styling */
+  }
+  
+  /* Form Input Styling */
+  .formContainer label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: bold;
+    color: #161515;
+  }
+  
+  .formContainer input[type="number"],
+  .formContainer input[type="text"] {
+    width: 90%;
+    padding: 8px; /* Adjusted padding */
+    margin-bottom: 8px; /* Adjusted margin */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Adjusted font size */
+    font-weight: 500;
+    transition: border 0.3s;
+  }
+  
+  .formContainer input[type="number"]:focus,
+  .formContainer input[type="text"]:focus {
+    border: 1px solid #007bff;
+  }
+  
+  .guestInput {
+    margin-bottom: 10px;
+    color: #121010;
+  }
+  
+  .addButton {
+    background: linear-gradient(45deg, #ff6f00, #ffcc00);
+    color: #fff;
+    border: none;
+    padding: 10px 15px; /* Adjusted padding */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Adjusted font size */
+    transition: background 0.3s;
+  }
+  
+  .addButton:hover {
+    background: linear-gradient(45deg, #ffcc00, #ff6f00);
+  }
+  
+  /* Ticket Section Styling */
+  .ticketsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduced gap */
+    justify-content: center;
+    margin: 0; /* Reduced margin */
+  }
+  
+  .ticket {
+    background:#3a1508; /* Dark brown shade */
+    color: #ffffff; /* White text */
+    padding: 15px; /* Adjusted padding */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow for 3D effect */
+    width: 220px; /* Adjusted width */
+    height: 150px; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transform: rotate(3deg); /* Slight rotation for dynamic look */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: medium;
+    font-family: cursive; /* Improved font styling */
+  }
+  
+  /* Rectangle for Ticket Content */
+  .ticketContent {
+    background: #3a1508; /* White background for rectangle */
+    color: #ffffff; /* Dark text for contrast */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    width: 100%;
+    height: 180px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for 3D effect */
+  }
+  
+  .ticket:hover {
+    transform: rotate(0deg);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  }
+  
+  /* Edit and Delete Button Styling */
+  .editButton, .deleteButton {
+    position: absolute;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.085);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    font-size: 16px; /* Icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .editButton:hover, .deleteButton:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .editButton {
+    left: 10px;
+  }
+  
+  .deleteButton {
+    right: 10px;
+  }
+  
+
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .formContainer {
+      width: 90%; /* Adjusted width for smaller screens */
+    }
+  }
+  

@@ -1,0 +1,88 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+/* Guest Form */
+.guest-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.guest-inputs {
+  margin-bottom: 20px;
+}
+
+.guest-form input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: calc(50% - 22px);
+  box-sizing: border-box;
+}
+
+.guest-form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.guest-form button:hover {
+  background: #0056b3;
+}
+
+.submit-button {
+  margin-top: 20px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875em;
+}
+
+/* Ticket Card */
+.ticket-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.ticket-card h3 {
+  margin-top: 0;
+}
+
+.guest-info {
+  margin-bottom: 10px;
+}
+
+.guest-info p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .guest-form input {
+    width: calc(100% - 22px);
+  }
+}
