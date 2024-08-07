@@ -34,20 +34,58 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(249, 245, 245);
+    font-weight: bolder;
     text-align: center;
   }
   
-  .overlay button {
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+/* Button Styling for Home Component */
+.overlay button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
     border: none;
-    color: white;
+    border-radius: 5px;
+    color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    outline: none;
   }
   
-  .overlay button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+  .overlay button.leftButton {
+    background-color:#fd3178 ; /* Yellow */
   }
   
+  .overlay button.rightButton {
+    background-color:#ffcc00 ; /* Pink */
+  }
+  
+  .overlay button.leftButton:hover {
+    background-color: #f80f60; /* Darker Yellow */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .overlay button.rightButton:hover {
+    background-color: #f5d503; /* Darker Pink */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+ /* Header styling for Home component */
+.header {
+    font-size: 2.5rem; /* Increase font size */
+    font-family: 'Roboto', sans-serif; /* Unique font style, use a font available in your project or Google Fonts */
+    font-weight: bold; /* Make the font bold */
+    color: #fff; /* White color for text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow effect to make text stand out */
+    margin: 0;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transformation */
+  }
+  
+  /* Hover effect for header */
+  .header:hover {
+    color: #f3eac8; /* Change text color on hover (e.g., yellow) */
+    transform: scale(1.1); /* Slightly enlarge the text on hover */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Darker shadow for emphasis */
+  }
+   
