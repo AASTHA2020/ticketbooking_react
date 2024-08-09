@@ -9,8 +9,8 @@ import rightImage from '../assets/rightImage.jpg';
 const Home = () => {
   const navigate = useNavigate();
 
-  const handleNavigate = () => {
-    navigate('/ticketBooking');
+  const handleNavigate = (path) => {
+    navigate(path);
   };
 
   return (
@@ -18,15 +18,15 @@ const Home = () => {
       <div className={styles.section}>
         <img src={leftImage} alt="Book Your Tickets Now" className={styles.image} />
         <div className={styles.overlay}>
-          <h2 className={styles.header}>BOOK  YOUR <b>TICKETS   NOW</b></h2>
-          <button className={styles.leftButton} onClick={handleNavigate}>Discover More</button>
+          <h2 className={styles.header}>BOOK YOUR <b>TICKETS NOW</b></h2>
+          <button className={styles.leftButton} onClick={() => handleNavigate('/ticketBooking')}>Discover More</button>
         </div>
       </div>
       <div className={styles.section}>
         <img src={rightImage} alt="Secure Your Concert Seats" className={styles.image} />
         <div className={styles.overlay}>
-          <h2 className={styles.header}>SECURE   YOUR <b>CONCERT   SEATS</b></h2>
-          <button className={styles.rightButton} onClick={handleNavigate}>Discover More</button>
+          <h2 className={styles.header}>SECURE YOUR <b>CONCERT SEATS</b></h2>
+          <button className={styles.rightButton} onClick={() => handleNavigate('/ticketBooking')}>Discover More</button>
         </div>
       </div>
     </div>

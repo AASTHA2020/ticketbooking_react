@@ -39,33 +39,10 @@
   color: rgb(249, 245, 245);
   font-weight: bolder;
   text-align: center;
-  pointer-events: none; /* Prevent overlay from affecting hover */
   width: 100%; /* Ensure overlay covers the entire section */
 }
 
-/* Header styling */
-.header {
-  display: flex;
-  flex-direction: column; /* Stack text vertically */
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem; /* Increased font size */
-  font-family: 'Arial', sans-serif; /* Change to a specific font, adjust as needed */
-  font-weight: bold; /* Bold text */
-  color: #fff; /* White text */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for text */
-  margin: 0;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-}
-
-/* Header hover effect */
-.header:hover {
-  color: #f3eac8; /* Change text color on hover (e.g., yellow) */
-  transform: scale(1.1); /* Slightly enlarge text on hover */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Darker shadow for emphasis */
-}
-
-/* Button Styling */
+/* Ensure buttons are clickable */
 .overlay button {
   padding: 12px 24px;
   font-size: 1.1rem;
