@@ -8,6 +8,7 @@ const TicketBooking = () => {
   const [age, setAge] = useState('');
   const [price, setPrice] = useState('');
   const [editIndex, setEditIndex] = useState(null);
+  const [errors, setErrors] = useState({}); // To store validation errors
 
   // Load guests from local storage on component mount
   useEffect(() => {
@@ -28,8 +29,24 @@ const TicketBooking = () => {
     return 300; // Senior price
   };
 
+  // Validate fields
+  const validate = () => {
+    const newErrors = {};
+    if (!name || !/^(?=.*[a-zA-Z].{2,})[a-zA-Z0-9]*$/.test(name)) {
+      newErrors.name = 'Name must include at least 2 letters and may contain numbers';
+    }
+    if (!age || age <= 0) {
+      newErrors.age = 'Age must be a positive number';
+    }
+    if (!name || !age) {
+      newErrors.general = 'All fields are mandatory';
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleAddGuest = () => {
-    if (name && age) {
+    if (validate()) {
       const guestPrice = calculatePrice(age);
       if (editIndex !== null) {
         const updatedGuests = [...guests];
@@ -42,6 +59,7 @@ const TicketBooking = () => {
       setName('');
       setAge('');
       setPrice('');
+      setErrors({});
     }
   };
 
@@ -60,6 +78,7 @@ const TicketBooking = () => {
     <div className={styles.pageContainer}>
       <div className={styles.formContainer}>
         <h2>Book Ticket</h2>
+        {errors.general && <div className={styles.generalError}>{errors.general}</div>}
         <div className={styles.guestInput}>
           <label htmlFor="name">Guest Name</label>
           <input
@@ -67,7 +86,9 @@ const TicketBooking = () => {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            className={errors.name ? styles.errorInput : ''}
           />
+          {errors.name && <div className={styles.error}>{errors.name}</div>}
         </div>
         <div className={styles.guestInput}>
           <label htmlFor="age">Age</label>
@@ -80,7 +101,9 @@ const TicketBooking = () => {
               setAge(ageValue);
               setPrice(calculatePrice(ageValue)); // Automatically update price
             }}
+            className={errors.age ? styles.errorInput : ''}
           />
+          {errors.age && <div className={styles.error}>{errors.age}</div>}
         </div>
         <div className={styles.guestInput}>
           <label htmlFor="price">Price</label>
@@ -91,7 +114,10 @@ const TicketBooking = () => {
             readOnly
           />
         </div>
-        <button className={styles.addButton} onClick={handleAddGuest}>
+        <button
+          className={`${styles.addButton} ${Object.keys(errors).length > 0 ? styles.errorButton : ''}`}
+          onClick={handleAddGuest}
+        >
           {editIndex !== null ? 'Update' : 'Add'} Guest
         </button>
       </div>

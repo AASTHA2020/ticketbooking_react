@@ -162,6 +162,24 @@
   }
   
 
+  .errorInput {
+    border: 2px solid red;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  .generalError {
+    color: red;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  
+  
+  
 
   /* Responsive Styling */
   @media (max-width: 768px) {
