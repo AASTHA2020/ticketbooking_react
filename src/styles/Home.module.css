@@ -1,91 +1,99 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-  }
-  
-  .section {
-    flex: 1;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    transition: flex 0.3s ease-in-out;
-  }
-  
-  .section:hover {
-    flex: 3;
-  }
-  
-  .image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .section:hover .image {
-    transform: scale(1.1);
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(249, 245, 245);
-    font-weight: bolder;
-    text-align: center;
-  }
-  
-/* Button Styling for Home Component */
-.overlay button {
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    outline: none;
-  }
-  
-  .overlay button.leftButton {
-    background-color:#fd3178 ; /* Yellow */
-  }
-  
-  .overlay button.rightButton {
-    background-color:#ffcc00 ; /* Pink */
-  }
-  
-  .overlay button.leftButton:hover {
-    background-color: #f80f60; /* Darker Yellow */
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .overlay button.rightButton:hover {
-    background-color: #f5d503; /* Darker Pink */
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
- /* Header styling for Home component */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.section {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: flex 1s cubic-bezier(0.42, 0, 0.58, 1), /* Smooth transition for flex expansion */
+              box-shadow 1s cubic-bezier(0.42, 0, 0.58, 1); /* Smooth transition for shadow */
+}
+
+.section:hover {
+  flex: 3;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Enhanced shadow for emphasis */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.42, 0, 0.58, 1); /* Smooth transition for zoom effect */
+}
+
+.section:hover .image {
+  transform: scale(1.2); /* Increased scale for more pronounced zoom effect */
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(249, 245, 245);
+  font-weight: bolder;
+  text-align: center;
+  pointer-events: none; /* Prevent overlay from affecting hover */
+  width: 100%; /* Ensure overlay covers the entire section */
+}
+
+/* Header styling */
 .header {
-    font-size: 2.5rem; /* Increase font size */
-    font-family: 'Roboto', sans-serif; /* Unique font style, use a font available in your project or Google Fonts */
-    font-weight: bold; /* Make the font bold */
-    color: #fff; /* White color for text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow effect to make text stand out */
-    margin: 0;
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transformation */
-  }
-  
-  /* Hover effect for header */
-  .header:hover {
-    color: #f3eac8; /* Change text color on hover (e.g., yellow) */
-    transform: scale(1.1); /* Slightly enlarge the text on hover */
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Darker shadow for emphasis */
-  }
-   
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem; /* Increased font size */
+  font-family: 'Arial', sans-serif; /* Change to a specific font, adjust as needed */
+  font-weight: bold; /* Bold text */
+  color: #fff; /* White text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for text */
+  margin: 0;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Header hover effect */
+.header:hover {
+  color: #f3eac8; /* Change text color on hover (e.g., yellow) */
+  transform: scale(1.1); /* Slightly enlarge text on hover */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Darker shadow for emphasis */
+}
+
+/* Button Styling */
+.overlay button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  margin-top: 10px;
+}
+
+.overlay button.leftButton {
+  background-color: #fd3178; /* Yellow */
+}
+
+.overlay button.rightButton {
+  background-color: #ffcc00; /* Pink */
+}
+
+.overlay button.leftButton:hover {
+  background-color: #f80f60; /* Darker Yellow */
+  transform: translateY(-4px); /* Lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.overlay button.rightButton:hover {
+  background-color: #f5d503; /* Darker Pink */
+  transform: translateY(-4px); /* Lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}

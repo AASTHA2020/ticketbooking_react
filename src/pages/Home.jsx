@@ -18,14 +18,14 @@ const Home = () => {
       <div className={styles.section}>
         <img src={leftImage} alt="Book Your Tickets Now" className={styles.image} />
         <div className={styles.overlay}>
-          <h2 className={styles.header}>Book Your Tickets Now</h2>
+          <h2 className={styles.header}>BOOK  YOUR <b>TICKETS   NOW</b></h2>
           <button className={styles.leftButton} onClick={handleNavigate}>Discover More</button>
         </div>
       </div>
       <div className={styles.section}>
         <img src={rightImage} alt="Secure Your Concert Seats" className={styles.image} />
         <div className={styles.overlay}>
-          <h2 className={styles.header}>Secure Your Concert Seats</h2>
+          <h2 className={styles.header}>SECURE   YOUR <b>CONCERT   SEATS</b></h2>
           <button className={styles.rightButton} onClick={handleNavigate}>Discover More</button>
         </div>
       </div>
