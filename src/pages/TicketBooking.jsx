@@ -25,7 +25,7 @@ const TicketBooking = () => {
   // Validate fields
   const validate = useCallback(() => {
     const newErrors = {};
-    if (!name || !/^(?=.*[a-zA-Z].{2,})[a-zA-Z0-9]*$/.test(name)) {
+    if (!name || !/^(?=.*[a-zA-Z].{2,})[a-zA-Z0-9 ]*$/.test(name)) {
       newErrors.name = 'Name must include at least 2 letters and may contain numbers';
     }
     if (!age || age <= 0 || age > 90) {
